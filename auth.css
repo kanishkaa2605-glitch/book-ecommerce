@@ -1,0 +1,278 @@
+/* Basic body styling to center content */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Full viewport height */
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0; /* Remove default body margin */
+}
+
+/* Navigation Bar Adjustments */
+.navbar {
+    background-color: #ffffff;
+    padding: 15px 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 30px; /* Space below navbar */
+}
+.navbar .nav-left .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #333;
+}
+/* Removed nav-center and nav-right for focus */
+
+/* Main container for centering the auth box */
+main {
+    flex-grow: 1; /* Takes up available space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 450px; /* Max width of the auth box */
+}
+
+.auth-box {
+    background-color: #fff;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.auth-header {
+    margin-bottom: 30px;
+}
+
+.auth-logo {
+    height: 50px; /* Adjust size as needed */
+    margin-bottom: 15px;
+}
+
+.auth-header h2 {
+    font-size: 2em;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.auth-header p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* Toggle Buttons */
+.auth-toggle {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.toggle-btn {
+    background-color: #f8f9fa;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    cursor: pointer;
+    flex-grow: 1; /* Distribute space */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.toggle-btn.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.toggle-btn:hover:not(.active) {
+    background-color: #e9ecef;
+}
+
+/* Forms */
+.auth-form {
+    display: none; /* Hidden by default */
+    text-align: left;
+}
+
+.auth-form.active {
+    display: block; /* Show active form */
+}
+
+.auth-form h3 {
+    font-size: 1.5em;
+    margin-bottom: 25px;
+    color: #444;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    position: relative; /* For error message positioning */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.error-message {
+    color: #dc3545; /* Red for errors */
+    font-size: 0.85em;
+    margin-top: 5px;
+    display: block; /* Ensure it takes space */
+    height: 1.2em; /* Reserve space */
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    font-size: 0.95em;
+}
+
+.forgot-password {
+    color: #007bff;
+    text-decoration: none;
+}
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 14px 20px;
+    background-color: #28a745; /* Green submit button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #218838;
+}
+
+/* Divider */
+.auth-divider {
+    position: relative;
+    text-align: center;
+    margin: 35px 0;
+    color: #6c757d;
+}
+
+.auth-divider::before, .auth-divider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    height: 1px;
+    background-color: #dee2e6;
+    transform: translateY(-50%);
+}
+
+.auth-divider::before { left: 0; }
+.auth-divider::after { right: 0; }
+
+.auth-divider span {
+    position: relative;
+    background-color: #fff; /* Match background */
+    padding: 0 10px;
+    z-index: 1;
+}
+
+/* Social Login */
+.social-login {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 20px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-btn i {
+    font-size: 1.2em;
+}
+
+.google-btn {
+    background-color: #fff;
+    color: #333;
+    border-color: #dee2e6;
+}
+.google-btn:hover {
+    background-color: #f8f9fa;
+}
+.google-btn i { color: #DB4437; } /* Google red */
+
+.facebook-btn {
+    background-color: #1877F2; /* Facebook blue */
+    color: white;
+    border-color: #1877F2;
+}
+.facebook-btn:hover {
+    background-color: #1565c0;
+    border-color: #1565c0;
+}
+.facebook-btn i { color: white; }
+
+
+/* Footer Adjustments for Auth Page */
+footer {
+    margin-top: auto; /* Push footer to bottom */
+    background-color: transparent;
+    color: #6c757d;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9em;
+}
+footer .footer-info { margin: 0; }
+
+
+/* Responsive Adjustments */
+@media (max-width: 576px) {
+    .auth-box {
+        padding: 30px 20px;
+    }
+    .auth-header h2 { font-size: 1.8em; }
+    .auth-toggle .toggle-btn { padding: 10px 15px; font-size: 1em; }
+    .auth-form h3 { font-size: 1.3em; }
+    .form-group input, .submit-btn { font-size: 0.95em; }
+    .submit-btn { padding: 12px 15px; }
+    .auth-divider::before, .auth-divider::after { width: 35%; }
+    .social-btn { font-size: 1em; }
+}

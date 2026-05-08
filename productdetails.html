@@ -1,0 +1,233 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Book Haven</title>
+    <link rel="stylesheet" href="style.css">       <!-- Reusing main styles -->
+    <link rel="stylesheet" href="productdetails.css">
+</head>
+<body>
+
+    <!-- Navigation Bar (Same as Page 1 & 2) -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-left">
+                <a href="index.html" class="logo">Book Haven</a>
+            </div>
+            <div class="nav-center">
+                <input type="text" class="search-bar" placeholder="Search for books, authors...">
+            </div>
+            <div class="nav-right">
+                <a href="auth.html" class="nav-link">Login</a>
+                <a href="cart.html" class="nav-link cart-icon" aria-label="Cart">
+                    <img src="cart-bag.svg" alt="" class="cart-button-img">
+                    <span class="cart-label">Cart</span>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Breadcrumbs -->
+        <section class="breadcrumbs-section">
+            <div class="container">
+                <nav class="breadcrumbs">
+                    <a href="index.html">Home</a> &gt; <a href="products.html">All Books</a> &gt; <span>Book Details</span>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Product Details Section -->
+        <section class="product-details-container container">
+            <!-- Image Gallery -->
+            <div class="product-image-gallery">
+                <div class="main-image">
+                    <img id="main-product-image" src="" alt="Selected book cover">
+                </div>
+                <div class="thumbnail-gallery">
+                    <img src="" alt="Selected book thumbnail 1" class="thumbnail active">
+                    <img src="" alt="Selected book thumbnail 2" class="thumbnail">
+                    <img src="" alt="Selected book thumbnail 3" class="thumbnail">
+                    <!-- Add more thumbnails as needed -->
+                </div>
+            </div>
+
+            <!-- Product Information & Actions -->
+            <div class="product-info-actions">
+                <h1 class="product-name">Book Details</h1>
+                <p class="product-author">by Author</p>
+                <div class="product-rating">
+                    ★★★★☆ (<span>1,250 ratings</span>)
+                </div>
+
+                <p class="product-price">₹0</p>
+                <p class="stock-availability in-stock">In Stock</p>
+                <!-- <p class="stock-availability low-stock">Low Stock (Only 3 left!)</p> -->
+                <!-- <p class="stock-availability out-of-stock">Out of Stock</p> -->
+
+                <!-- Variant Selector (Example for book editions) -->
+                <div class="variant-selector">
+                    <label for="product-edition">Edition:</label>
+                    <select id="product-edition">
+                        <option value="hardcover" selected>Hardcover</option>
+                        <option value="paperback">Paperback</option>
+                        <option value="ebook">Ebook</option>
+                    </select>
+                </div>
+
+                <!-- Quantity Selector -->
+                <div class="quantity-selector">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" value="1" min="1" max="10">
+                </div>
+
+                <!-- Add to Cart Button -->
+                <button id="add-to-cart-btn" class="add-to-cart-btn">Add to Cart</button>
+                <button class="add-to-wishlist-btn">Add to Wishlist</button>
+            </div>
+        </section>
+
+        <!-- Description & Specifications Tabs -->
+        <section class="product-tabs-section container">
+            <div class="tab-headers">
+                <button class="tab-header active" data-tab="description">Description</button>
+                <button class="tab-header" data-tab="specifications">Specifications</button>
+                <button class="tab-header" data-tab="reviews">Reviews (1,250)</button>
+            </div>
+            <div class="tab-content">
+                <!-- Description Tab -->
+                <div id="description" class="tab-pane active">
+                    <h2>About the Book</h2>
+                    <p>Select a book to see its description.</p>
+                    <p>The details for the selected title will appear here.</p>
+                </div>
+
+                <!-- Specifications Tab -->
+                <div id="specifications" class="tab-pane">
+                    <h2>Book Details</h2>
+                    <ul>
+                        <li><strong>ISBN:</strong> 978-0575093610</li>
+                        <li><strong>Publisher:</strong> Tor Books</li>
+                        <li><strong>Publication Date:</strong> August 27, 2010</li>
+                        <li><strong>Number of Pages:</strong> 1007</li>
+                        <li><strong>Dimensions:</strong> 6.1 x 3.6 x 9.1 inches</li>
+                        <li><strong>Language:</strong> English</li>
+                        <li><strong>Genre:</strong> Epic Fantasy, High Fantasy</li>
+                    </ul>
+                </div>
+
+                 <!-- Reviews Tab -->
+                <div id="reviews" class="tab-pane">
+                    <h2>Customer Reviews</h2>
+                    <div class="review">
+                        <div class="reviewer-info">
+                            <span class="reviewer-name">Alex R.</span>
+                            <span class="review-rating">★★★★★</span>
+                            <span class="review-date">August 15, 2026</span>
+                        </div>
+                        <p class="review-text">Absolutely incredible world-building and character development. Sanderson is a genius!</p>
+                    </div>
+                    <div class="review">
+                        <div class="reviewer-info">
+                            <span class="reviewer-name">Sarah K.</span>
+                            <span class="review-rating">★★★★☆</span>
+                            <span class="review-date">August 10, 2026</span>
+                        </div>
+                        <p class="review-text">A bit long, but totally worth the investment. The magic system is fascinating.</p>
+                    </div>
+                    <!-- Add more reviews as needed -->
+                    <a href="#" class="view-all-reviews">View All Reviews</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Products Section -->
+        <section class="related-products-section container">
+            <h2>You Might Also Like</h2>
+            <div class="related-products-carousel">
+                <!-- Related Product Card 1 -->
+                <div class="related-product-card" data-product-id="the-way-of-kings-brandon-sanderson">
+                    <img src="wayofkings.jpg" alt="The Way of Kings">
+                    <h3>The Way of Kings</h3>
+                    <p>Brandon Sanderson</p>
+                    <span class="price">₹649</span>
+                </div>
+                <!-- Related Product Card 2 -->
+                <div class="related-product-card" data-product-id="the-name-of-the-wind-patrick-rothfuss">
+                    <img src="nameofthewind.jpg" alt="The Name of the Wind">
+                    <h3>The Name of the Wind</h3>
+                    <p>Patrick Rothfuss</p>
+                    <span class="price">₹699</span>
+                </div>
+                <!-- Related Product Card 3 -->
+                <div class="related-product-card" data-product-id="a-game-of-thrones-george-r-r-martin">
+                    <img src="gameofthrones.jpg" alt="A Game of Thrones">
+                    <h3>A Game of Thrones</h3>
+                    <p>George R.R. Martin</p>
+                    <span class="price">₹549</span>
+                </div>
+                 <!-- Related Product Card 4 -->
+                <div class="related-product-card" data-product-id="the-priory-of-the-orange-tree-samantha-shannon">
+                    <img src="priorityoforangetree.jpg" alt="The Priory of the Orange Tree">
+                    <h3>The Priory of the Orange Tree</h3>
+                    <p>Samantha Shannon</p>
+                    <span class="price">₹849</span>
+                </div>
+                <!-- Add more related product cards -->
+            </div>
+            <!-- Navigation arrows for carousel could be added here -->
+        </section>
+    </main>
+
+    <!-- Footer (Same as Page 1 & 2) -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                </ul>
+            </div>
+            <div class="footer-info">
+                <h4>Book Haven</h4>
+                <p>&copy; 2026 Book Haven. All rights reserved.</p>
+                <p>123 Literary Lane, Booktown, INDIA</p>
+                <p>Email: info@bookhaven.com</p>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/bookhaven.demo" target="_blank" rel="noopener noreferrer" aria-label="Book Haven on Facebook"><i class="fab fa-facebook-f"></i><span>Facebook</span></a>
+                    <a href="https://twitter.com/bookhaven_demo" target="_blank" rel="noopener noreferrer" aria-label="Book Haven on Twitter"><i class="fab fa-twitter"></i><span>Twitter</span></a>
+                    <a href="https://www.instagram.com/bookhaven.demo" target="_blank" rel="noopener noreferrer" aria-label="Book Haven on Instagram"><i class="fab fa-instagram"></i><span>Instagram</span></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Link main JS -->
+    <script src="script.js"></script>
+    <!-- Link product detail page specific JS -->
+    <script src="productdetails.js"></script>
+    <!-- Link to Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous" async></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,220 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Books - Book Haven</title>
+    <link rel="stylesheet" href="style.css"> <!-- Reusing the same CSS for consistency -->
+    <link rel="stylesheet" href="products.css">
+</head>
+<body>
+
+    <!-- Navigation Bar (Same as Page 1) -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-left">
+                <a href="index.html" class="logo">Book Haven</a>
+            </div>
+            <div class="nav-center">
+                <input type="text" class="search-bar" placeholder="Search for books, authors...">
+            </div>
+            <div class="nav-right">
+                <a href="auth.html" class="nav-link">Login</a>
+                <a href="cart.html" class="nav-link cart-icon" aria-label="Cart">
+                    <img src="cart-bag.svg" alt="" class="cart-button-img">
+                    <span class="cart-label">Cart</span>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Page Title / Breadcrumbs -->
+        <section class="page-header">
+            <div class="container">
+                <h1>young adult</h1>
+                <nav class="breadcrumbs">
+                    <a href="index.html">Home</a> &gt; <a href="fiction.html">Fiction</a> &gt;<a href="nonfiction.html">Non-Fiction</a>&gt; <a href="mystery.html">Mystery</a> &gt;<a href="products.html">Sci-fi & Fantasy</a> &gt;<a href="biography.html">Biography</a> &gt;<span>Young adult</span></span>
+                </nav>
+            </div>
+        </section>
+
+        <div class="product-listing-container container">
+            <!-- Filtering Sidebar -->
+            <aside class="filters-sidebar">
+                <h3>Filter By</h3>
+
+                <div class="filter-group">
+                    <h4>Category</h4>
+                    <ul>
+                        <li><a href="fiction.html">Fiction</a></li>
+                        <li><a href="nonfiction.html">Non-Fiction</a></li>
+                        <li><a href="mystery.html">Mystery</a></li>
+                        <li><a href="products.html">Sci-Fi & Fantasy</a></li>
+                        <li><a href="biography.html">Biography</a></li>
+                        <li><a href="youngadult.html">Young Adult</a></li>
+                    </ul>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Price Range</h4>
+                    <label for="price-min">Min:</label>
+                    <input type="number" id="price-min" placeholder="₹0">
+                    <label for="price-max">Max:</label>
+                    <input type="number" id="price-max" placeholder="₹1000">
+                    <button class="apply-filter-btn">Apply</button>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Format</h4>
+                    <ul>
+                        <li><input type="checkbox" id="format-hardcover"><label for="format-hardcover"> Hardcover</label></li>
+                        <li><input type="checkbox" id="format-paperback"><label for="format-paperback"> Paperback</label></li>
+                        <li><input type="checkbox" id="format-ebook"><label for="format-ebook"> Ebook</label></li>
+                    </ul>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Availability</h4>
+                    <ul>
+                        <li><input type="checkbox" id="in-stock"><label for="in-stock"> In Stock Only</label></li>
+                    </ul>
+                </div>
+
+                <button class="clear-filters-btn">Clear All Filters</button>
+            </aside>
+
+            <!-- Product Display Area -->
+            <section class="product-display">
+                <div class="sort-options">
+                    <label for="sort-by">Sort by:</label>
+                    <select id="sort-by">
+                        <option value="popularity">Popularity</option>
+                        <option value="price-asc">Price: Low to High</option>
+                        <option value="price-desc">Price: High to Low</option>
+                        <option value="newest">Newest Arrivals</option>
+                        <option value="alphabetical-asc">Alphabetical (A-Z)</option>
+                        <option value="alphabetical-desc">Alphabetical (Z-A)</option>
+                    </select>
+                </div>
+
+                <div class="product-grid">
+                    <!-- Product Card 1 -->
+                    <div class="product-card">
+                        <img src="escaperoom.jpg" alt="Book Cover A">
+                        <h3>The Escape Room</h3>
+                        <p>Marissa Meyer</p>
+                        <div class="price-rating">
+                            <span class="price">₹799</span>
+                            <span class="rating">★★★★☆</span>
+                        </div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                        <button class="quick-view-btn">Quick View</button>
+                    </div>
+                    <!-- Product Card 2 -->
+                    <div class="product-card">
+                        <img src="flirtingwithmurder.jpg" alt="Book Cover B">
+                        <h3>Flirting with Murder</h3>
+                        <p>Amanda Sellet</p>
+                        <div class="price-rating">
+                            <span class="price">₹649</span>
+                            <span class="rating">★★★★☆</span>
+                        </div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                        <button class="quick-view-btn">Quick View</button>
+                    </div>
+                    <!-- Product Card 3 -->
+                    <div class="product-card">
+                        <img src="deathlyfates.jpg" alt="Book Cover C">
+                        <h3>Deathly Fates</h3>
+                        <p>Tesia Tesia</p>
+                        <div class="price-rating">
+                            <span class="price">₹699</span>
+                            <span class="rating">★★★★★</span>
+                        </div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                        <button class="quick-view-btn">Quick View</button>
+                    </div>
+                    <!-- Product Card 4 -->
+                    <div class="product-card">
+                        <img src="summerofficial.jpg" alt="Book Cover D">
+                        <h3>Summer Official</h3>
+                        <p>Rebekah Weatherspoon</p>
+                        <div class="price-rating">
+                            <span class="price">₹549</span>
+                            <span class="rating">★★★★☆</span>
+                        </div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                        <button class="quick-view-btn">Quick View</button>
+                    </div>
+                    <!-- Product Card 5 -->
+                    <div class="product-card">
+                        <img src="theywantusdead.jpg" alt="Book Cover E">
+                        <h3>They Want us dead</h3>
+                        <p>CL Montblac</p>
+                        <div class="price-rating">
+                            <span class="price">₹899</span>
+                            <span class="rating">★★★★☆</span>
+                        </div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                        <button class="quick-view-btn">Quick View</button>
+                    </div>
+                    <!-- Product Card 6 -->
+                    <div class="product-card">
+                        <img src="thiscouldallgobad.jpg" alt="Book Cover F">
+                        <h3>This could all go Bad</h3>
+                        <p>Spencer Hall</p>
+                        <div class="price-rating">
+                            <span class="price">₹599</span>
+                            <span class="rating">★★★★★</span>
+                        </div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                        <button class="quick-view-btn">Quick View</button>
+                    </div>
+                    <!-- Add more product cards as needed -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer (Same as Page 1) -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                </ul>
+            </div>
+            <div class="footer-info">
+                <h4>Book Haven</h4>
+                <p>&copy; 2026 Book Haven. All rights reserved.</p>
+                <p>123 Literary Lane, Booktown, INDIA</p>
+                <p>Email: info@bookhaven.com</p>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/bookhaven.demo" target="_blank" rel="noopener noreferrer" aria-label="Book Haven on Facebook"><i class="fab fa-facebook-f"></i><span>Facebook</span></a>
+                    <a href="https://twitter.com/bookhaven_demo" target="_blank" rel="noopener noreferrer" aria-label="Book Haven on Twitter"><i class="fab fa-twitter"></i><span>Twitter</span></a>
+                    <a href="https://www.instagram.com/bookhaven.demo" target="_blank" rel="noopener noreferrer" aria-label="Book Haven on Instagram"><i class="fab fa-instagram"></i><span>Instagram</span></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Link to Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script> <!-- Reusing the main JS -->
+    <script src="products.js"></script> <!-- New JS for product page specific logic -->
+</body>
+</html>
+
+
+
+
+

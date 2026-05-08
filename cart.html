@@ -1,0 +1,212 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - Book Haven</title>
+    <link rel="stylesheet" href="style.css">       <!-- Reusing main styles -->
+    <link rel="stylesheet" href="cart.css"> 
+    <link rel="javascript" href="cart.js">      <!-- New styles for cart page -->
+</head>
+<body>
+
+    <!-- Navigation Bar (Consistent) -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-left">
+                <a href="index.html" class="logo">Book Haven</a>
+            </div>
+            <div class="nav-center">
+                <input type="text" class="search-bar" placeholder="Search for books, authors...">
+            </div>
+            <div class="nav-right">
+                <a href="auth.html" class="nav-link">Login</a>
+                <a href="cart.html" class="nav-link cart-icon" aria-label="Cart">
+                    <img src="cart-bag.svg" alt="" class="cart-button-img">
+                    <span class="cart-label">Cart</span>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header cart-header">
+            <div class="container">
+                <h1>Your Shopping Cart</h1>
+            </div>
+        </section>
+
+        <!-- Cart Content (Visible when cart is NOT empty) -->
+        <div id="cart-content" class="container cart-container">
+            <!-- Cart Items List -->
+            <section class="cart-items-list">
+                <h2>Items in Cart</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Subtotal</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-items-body">
+                        <!-- Cart Item Row 1 (Example) -->
+                        <tr class="cart-item-row">
+                            <td class="product-info">
+                                <img src="wayofkings.jpg" alt="The Way of Kings">
+                                <div class="product-details">
+                                    <a href="productdetails.html?id=the-way-of-kings-brandon-sanderson">The Way of Kings</a>
+                                    <p>Brandon Sanderson</p>
+                                    <span>Hardcover</span>
+                                </div>
+                            </td>
+                            <td class="price">â‚¹799.00</td>
+                            <td class="quantity">
+                                <div class="quantity-controls">
+                                    <button class="qty-btn minus-btn">-</button>
+                                    <input type="number" value="1" min="1" class="qty-input">
+                                    <button class="qty-btn plus-btn">+</button>
+                                </div>
+                            </td>
+                            <td class="item-subtotal">â‚¹799.00</td>
+                            <td class="remove-item">
+                                <button class="remove-btn" aria-label="Remove item"><i class="fas fa-times"></i></button>
+                            </td>
+                        </tr>
+                        <!-- Cart Item Row 2 (Example) -->
+                        <tr class="cart-item-row">
+                            <td class="product-info">
+                                <img src="atomichabits.jpeg" alt="Atomic Habits">
+                                <div class="product-details">
+                                    <a href="productdetails.html?id=atomic-habits-james-clear">Atomic Habits</a>
+                                    <p>James Clear</p>
+                                    <span>Paperback</span>
+                                </div>
+                            </td>
+                            <td class="price">â‚¹349.00</td>
+                            <td class="quantity">
+                                <div class="quantity-controls">
+                                    <button class="qty-btn minus-btn">-</button>
+                                    <input type="number" value="2" min="1" class="qty-input">
+                                    <button class="qty-btn plus-btn">+</button>
+                                </div>
+                            </td>
+                            <td class="item-subtotal">â‚¹698.00</td>
+                            <td class="remove-item">
+                                <button class="remove-btn" aria-label="Remove item"><i class="fas fa-times"></i></button>
+                            </td>
+                        </tr>
+                         <!-- Cart Item Row 3 (Example) -->
+                        <tr class="cart-item-row">
+                            <td class="product-info">
+                                <img src="silentpatient.jpeg" alt="The Silent Patient">
+                                <div class="product-details">
+                                    <a href="productdetails.html?id=the-silent-patient-alex-michaelides">The Silent Patient</a>
+                                    <p>Alex Michaelides</p>
+                                    <span>Hardcover</span>
+                                </div>
+                            </td>
+                            <td class="price">â‚¹499.00</td>
+                            <td class="quantity">
+                                <div class="quantity-controls">
+                                    <button class="qty-btn minus-btn">-</button>
+                                    <input type="number" value="1" min="1" class="qty-input">
+                                    <button class="qty-btn plus-btn">+</button>
+                                </div>
+                            </td>
+                            <td class="item-subtotal">â‚¹499.00</td>
+                            <td class="remove-item">
+                                <button class="remove-btn" aria-label="Remove item"><i class="fas fa-times"></i></button>
+                            </td>
+                        </tr>
+                        <!-- More items can be added here -->
+                    </tbody>
+                </table>
+                <div class="cart-actions">
+                    <a href="index.html" class="continue-shopping-btn">Continue Shopping</a>
+                </div>
+            </section>
+
+            <!-- Order Summary Panel -->
+            <aside class="order-summary">
+                <h2>Order Summary</h2>
+                <div class="summary-section">
+                    <p>Subtotal</p>
+                    <p id="cart-subtotal">â‚¹1996.00</p>
+                </div>
+                <div class="summary-section promo-code-section">
+                    <label for="promo-code">Promo Code</label>
+                    <div class="promo-input-group">
+                        <input type="text" id="promo-code" placeholder="Enter code">
+                        <button id="apply-promo-btn">Apply</button>
+                    </div>
+                    <p id="promo-message" class="promo-message"></p> <!-- For success/error messages -->
+                </div>
+                <div class="summary-section discount-section">
+                    <p>Discount</p>
+                    <p id="cart-discount">â‚¹0.00</p>
+                </div>
+                <div class="summary-section shipping-section">
+                    <p>Shipping</p>
+                    <p id="cart-shipping">Calculated at checkout</p> <!-- Or Free Shipping etc. -->
+                </div>
+                <div class="summary-section total-section">
+                    <p><strong>Total</strong></p>
+                    <p id="cart-total"><strong>â‚¹1996.00</strong></p>
+                </div>
+                <button id="proceed-to-checkout-btn" class="checkout-btn">Proceed to Checkout</button>
+            </aside>
+        </div>
+
+        <!-- Empty Cart State (Initially hidden) -->
+        <div id="empty-cart-message" class="container empty-cart-container" style="display: none;">
+            <img src="cart-bag.svg" alt="Empty shopping cart" class="empty-cart-image">
+            <h2>Your Cart is Empty</h2>
+            <p>Looks like you haven't added any books yet. Let's fix that!</p>
+            <a href="index.html" class="continue-shopping-btn-empty">Continue Shopping</a>
+        </div>
+    </main>
+
+    <!-- Footer (Consistent) -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                </ul>
+            </div>
+            <div class="footer-info">
+                <h4>Book Haven</h4>
+                <p>&copy; 2026 Book Haven. All rights reserved.</p>
+                <p>123 Literary Lane, Booktown, INDIA</p>
+                <p>Email: info@bookhaven.com</p>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/bookhaven.demo" target="_blank" rel="noopener noreferrer" aria-label="Book Haven on Facebook"><i class="fab fa-facebook-f"></i><span>Facebook</span></a>
+                    <a href="https://twitter.com/bookhaven_demo" target="_blank" rel="noopener noreferrer" aria-label="Book Haven on Twitter"><i class="fab fa-twitter"></i><span>Twitter</span></a>
+                    <a href="https://www.instagram.com/bookhaven.demo" target="_blank" rel="noopener noreferrer" aria-label="Book Haven on Instagram"><i class="fab fa-instagram"></i><span>Instagram</span></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Link to Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- Link main JS -->
+    <script src="script.js"></script>
+    <!-- Link cart page specific JS -->
+    <script src="cart.js"></script>
+</body>
+</html>
+
+

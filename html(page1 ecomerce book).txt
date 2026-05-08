@@ -1,0 +1,609 @@
+html(page1 ecomerce book)
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Haven - Your Literary Escape</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-left">
+                <a href="#" class="logo">Book Haven</a>
+            </div>
+            <div class="nav-center">
+                <input type="text" class="search-bar" placeholder="Search for books, authors...">
+            </div>
+            <div class="nav-right">
+                <a href="#" class="nav-link">Login</a>
+                <a href="#" class="nav-link cart-icon">
+                    <i class="fas fa-shopping-cart"></i> <!-- Font Awesome Icon -->
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Discover Your Next Great Read</h1>
+                <p>Explore our curated collection of captivating stories and insightful knowledge.</p>
+                <a href="#" class="cta-button">Shop Now</a>
+            </div>
+            <!-- Banner Image will be set via CSS -->
+        </section>
+
+        <!-- Featured Products Section -->
+        <section class="featured-products">
+            <h2>Featured Books</h2>
+            <div class="product-grid">
+                <!-- Product Card 1 -->
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200x300?text=Book+Cover+1" alt="Book Cover 1">
+                    <h3>The Silent Patient</h3>
+                    <p>Alex Michaelides</p>
+                    <span class="price">₹499</span>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <!-- Product Card 2 -->
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200x300?text=Book+Cover+2" alt="Book Cover 2">
+                    <h3>Atomic Habits</h3>
+                    <p>James Clear</p>
+                    <span class="price">₹349</span>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <!-- Product Card 3 -->
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200x300?text=Book+Cover+3" alt="Book Cover 3">
+                    <h3>The Midnight Library</h3>
+                    <p>Matt Haig</p>
+                    <span class="price">₹449</span>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <!-- Product Card 4 -->
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200x300?text=Book+Cover+4" alt="Book Cover 4">
+                    <h3>Dune</h3>
+                    <p>Frank Herbert</p>
+                    <span class="price">₹599</span>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <!-- Product Card 5 -->
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200x300?text=Book+Cover+5" alt="Book Cover 5">
+                    <h3>Project Hail Mary</h3>
+                    <p>Andy Weir</p>
+                    <span class="price">₹549</span>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+                <!-- Product Card 6 -->
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200x300?text=Book+Cover+6" alt="Book Cover 6">
+                    <h3>Where the Crawdads Sing</h3>
+                    <p>Delia Owens</p>
+                    <span class="price">₹479</span>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category Section -->
+        <section class="category-section">
+            <h2>Explore Genres</h2>
+            <div class="category-grid">
+                <a href="#" class="category-item">Fiction</a>
+                <a href="#" class="category-item">Non-Fiction</a>
+                <a href="#" class="category-item">Mystery</a>
+                <a href="#" class="category-item">Sci-Fi & Fantasy</a>
+                <a href="#" class="category-item">Children's Books</a>
+                <a href="#" class="category-item">Biography</a>
+            </div>
+        </section>
+
+        <!-- Promotional Banner/Offer Strip -->
+        <section class="promo-banner">
+            <p>🚚 Free Shipping on orders above ₹499!</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                </ul>
+            </div>
+            <div class="footer-info">
+                <h4>Book Haven</h4>
+                <p>&copy; 2026 Book Haven. All rights reserved.</p>
+                <p>123 Literary Lane, Booktown, INDIA</p>
+                <p>Email: info@bookhaven.com</p>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <!-- Link to Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+css
+
+
+
+
+
+/* Basic Reset & Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff; /* Default link color */
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #ffffff;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky; /* Make it stick to the top */
+    top: 0;
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+.nav-left .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #333;
+}
+
+.nav-center .search-bar {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 400px; /* Adjust as needed */
+    font-size: 1em;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-link {
+    margin-left: 20px;
+    font-size: 1.1em;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #007bff;
+}
+
+.cart-icon {
+    position: relative;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 3px 7px;
+    font-size: 0.7em;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero-section {
+    background: url('https://via.placeholder.com/1500x500?text=Beautiful+Bookstore+Banner') no-repeat center center/cover;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden; /* To contain the overlay */
+}
+
+.hero-section::before { /* Overlay for better text readability */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Dark overlay */
+}
+
+.hero-content {
+    position: relative; /* To be above the overlay */
+    z-index: 1;
+    max-width: 700px;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-content p {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.cta-button {
+    background-color: #ff6600; /* Orange CTA */
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e65c00;
+}
+
+/* Featured Products Section */
+.featured-products, .category-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #fff;
+    margin-top: 30px; /* Spacing between sections */
+}
+
+.featured-products h2, .category-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Pushes button to bottom */
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: 250px; /* Fixed height for consistency */
+    object-fit: cover; /* Ensures image covers the area without distortion */
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+.product-card h3 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.product-card p {
+    font-size: 0.95em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.product-card .price {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #d9534f; /* Reddish for price */
+    margin-bottom: 15px;
+    display: block; /* Ensure it takes its own line */
+}
+
+.add-to-cart-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    margin-top: auto; /* Pushes button to bottom when using flexbox */
+}
+
+.add-to-cart-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Category Section */
+.category-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.category-item {
+    background-color: #e9ecef;
+    color: #333;
+    padding: 12px 25px;
+    border-radius: 25px; /* Pill shape */
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: 1px solid #ccc;
+}
+
+.category-item:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Promotional Banner */
+.promo-banner {
+    background-color: #28a745; /* Green for emphasis */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #eee;
+    padding: 40px 20px 20px;
+    margin-top: 40px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links, .footer-info, .footer-social {
+    margin: 20px;
+    min-width: 200px; /* Prevent over-shrinking */
+}
+
+.footer-links h4, .footer-info h4, .footer-social h4 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: #aaa;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #fff;
+}
+
+.footer-info p {
+    color: #aaa;
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    font-size: 1.5em;
+}
+
+.social-icons a {
+    color: #aaa;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #fff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px;
+    }
+    .nav-center .search-bar {
+        width: 80%;
+        margin: 10px 0;
+    }
+    .nav-right {
+        margin-top: 10px;
+    }
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+    .hero-content p {
+        font-size: 1.1em;
+    }
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-links, .footer-info, .footer-social {
+        margin: 15px;
+    }
+}
+
+
+
+
+
+javascript
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    console.log("DOM fully loaded and parsed");
+
+    // --- Basic Cart Functionality (Example) ---
+    let cartItemCount = 0; // Initialize cart count
+
+    const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+    const cartCountElement = document.querySelector('.cart-count');
+
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            event.preventDefault(); // Prevent default button behavior if it were a link
+
+            // In a real app, you'd add the specific product to a cart data structure.
+            // For this example, we'll just increment the count.
+            cartItemCount++;
+            updateCartDisplay();
+            alert('Item added to cart!'); // Simple feedback
+        });
+    });
+
+    function updateCartDisplay() {
+        if (cartCountElement) {
+            cartCountElement.textContent = cartItemCount;
+        }
+    }
+
+    // --- Navigation Link Functionality (Examples) ---
+    const logoLink = document.querySelector('.logo');
+    if (logoLink) {
+        logoLink.addEventListener('click', (event) => {
+            event.preventDefault();
+            console.log('Logo clicked! Navigating to Home...');
+            // In a real app, you'd navigate: window.location.href = '/';
+        });
+    }
+
+    const ctaButton = document.querySelector('.cta-button');
+    if (ctaButton) {
+        ctaButton.addEventListener('click', (event) => {
+            event.preventDefault();
+            console.log('CTA button clicked! Navigating to Shop...');
+            // In a real app, you'd navigate: window.location.href = '/products';
+        });
+    }
+
+    const categoryLinks = document.querySelectorAll('.category-item');
+    categoryLinks.forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            const category = link.textContent;
+            console.log(`Category "${category}" clicked! Navigating to category page...`);
+            // In a real app, you'd navigate: window.location.href = `/category/${category.toLowerCase().replace(/\s+/g, '-')}`;
+        });
+    });
+
+    // --- Other potential JS functionalities ---
+    // - Smooth scrolling for anchor links
+    // - Image carousel/slider for hero or featured products
+    // - Form validation for login/signup (on other pages)
+    // - AJAX calls to load more products or search results dynamically
+});
+
+// --- Example of a function you might call elsewhere ---
+function displaySpecialOffer(message) {
+    const promoBanner = document.querySelector('.promo-banner p');
+    if (promoBanner) {
+        promoBanner.textContent = message;
+        promoBanner.parentElement.style.backgroundColor = '#ffc107'; // Change color for emphasis
+        promoBanner.parentElement.style.color = '#333';
+    }
+}
+
+// Example of using the function (uncomment to test)
+// window.onload = () => {
+//     setTimeout(() => {
+//         displaySpecialOffer("🔥 Flash Sale: 20% Off All Fiction Books!");
+//     }, 5000); // Show offer after 5 seconds
+// };
